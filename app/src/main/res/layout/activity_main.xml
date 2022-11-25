@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvMesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Mesa"
+        app:layout_constraintStart_toStartOf="@+id/txtMesa"
+        app:layout_constraintTop_toBottomOf="@+id/tvRestaurante"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/txtMesa"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="00"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/txtPrato"
+        app:layout_constraintTop_toBottomOf="@+id/tvMesa"
+        tools:ignore="HardcodedText"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tvItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Item"
+        app:layout_constraintStart_toStartOf="@+id/txtItem"
+        app:layout_constraintTop_toBottomOf="@+id/tvRestaurante"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/txtItem"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrato"
+        app:layout_constraintTop_toBottomOf="@+id/tvItem"
+        tools:ignore="HardcodedText"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tvPrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Prato"
+        app:layout_constraintStart_toStartOf="@+id/txtPrato"
+        app:layout_constraintTop_toBottomOf="@+id/txtMesa"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/txtPrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Ex.: pizza"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrato"
+        tools:ignore="HardcodedText"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/tvRestaurante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Restaurante"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInserir" />
+
+    <Button
+        android:id="@+id/btnInserir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Inserir pedido"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrato"
+        app:layout_constraintStart_toStartOf="@+id/txtPrato"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrato"
+        tools:ignore="HardcodedText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvMesaLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Mesa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvItemLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Item"
+        app:layout_constraintStart_toEndOf="@+id/tvMesaLista"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPratoLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Prato"
+        app:layout_constraintStart_toEndOf="@+id/tvItemLista"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAtendido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Atendido?"
+        app:layout_constraintStart_toEndOf="@+id/tvPratoLista"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMesaLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="00"
+        app:layout_constraintStart_toStartOf="@+id/tvMesaLista"
+        app:layout_constraintTop_toBottomOf="@+id/tvMesaLista" />
+
+    <TextView
+        android:id="@+id/txtItemLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/tvItemLista"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemLista" />
+
+    <TextView
+        android:id="@+id/txtPratoLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Prato"
+        app:layout_constraintStart_toStartOf="@+id/tvPratoLista"
+        app:layout_constraintTop_toBottomOf="@+id/tvPratoLista" />
+
+    <TextView
+        android:id="@+id/txtAtendido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="NÃO"
+        android:textColor="#F44336"
+        app:layout_constraintStart_toStartOf="@+id/tvAtendido"
+        app:layout_constraintTop_toBottomOf="@+id/tvAtendido" />
+</androidx.constraintlayout.widget.ConstraintLayout>
