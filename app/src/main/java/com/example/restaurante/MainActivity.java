@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,14 +40,21 @@ public class MainActivity extends AppCompatActivity {
             int item = Integer.parseInt(txtItem.getText().toString());
             String prato = txtPrato.getText().toString();
 
-            String chave = restaurante.push().getKey();
+            if (prato.isBlank()) {
+                Toast.makeText(this, "Nome do prato não informado!", Toast.LENGTH_SHORT).show();
+            } else {
+                String chave = restaurante.push().getKey();
 
-            Pedido pedido = new Pedido(chave, mesa, item, prato);
-            restaurante.child(chave).setValue(pedido);
+                Pedido pedido = new Pedido(chave, mesa, item, prato);
+                restaurante.child(chave).setValue(pedido);
 
-            txtMesa.setText("");
-            txtItem.setText("");
-            txtPrato.setText("");
+                txtMesa.setText("");
+                txtItem.setText("");
+                txtPrato.setText("");
+
+                Toast.makeText(this, "Pedido adicionado com sucesso!", Toast.LENGTH_SHORT).show();
+            }
+
         });
 
         FirebaseListOptions<Pedido> options = new FirebaseListOptions.Builder<Pedido>()

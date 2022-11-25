@@ -7,59 +7,42 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvMesa"
+        android:id="@+id/tvRestaurante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Mesa"
-        app:layout_constraintStart_toStartOf="@+id/txtMesa"
-        app:layout_constraintTop_toBottomOf="@+id/tvRestaurante"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/starborn"
+        android:text="Restaurante 😋🍴"
+        android:textAllCaps="false"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
 
-    <EditText
-        android:id="@+id/txtMesa"
-        android:layout_width="80dp"
-        android:layout_height="48dp"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="213dp"
+        android:layout_height="164dp"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="00"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="@+id/txtPrato"
-        app:layout_constraintTop_toBottomOf="@+id/tvMesa"
-        tools:ignore="HardcodedText"
-        android:importantForAutofill="no" />
-
-    <TextView
-        android:id="@+id/tvItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Item"
-        app:layout_constraintStart_toStartOf="@+id/txtItem"
+        android:contentDescription="garçonetes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRestaurante"
+        app:srcCompat="@drawable/maid_cafe"
         tools:ignore="HardcodedText" />
 
-    <EditText
-        android:id="@+id/txtItem"
-        android:layout_width="80dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="0"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/txtPrato"
-        app:layout_constraintTop_toBottomOf="@+id/tvItem"
-        tools:ignore="HardcodedText"
-        android:importantForAutofill="no" />
-
-    <TextView
-        android:id="@+id/tvPrato"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnInserir"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Prato"
+        android:text="Inserir pedido!"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrato"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtPrato"
-        app:layout_constraintTop_toBottomOf="@+id/txtMesa"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrato"
         tools:ignore="HardcodedText" />
 
     <EditText
@@ -69,50 +52,87 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Ex.: pizza"
+        android:importantForAutofill="no"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPrato"
-        tools:ignore="HardcodedText"
-        android:importantForAutofill="no" />
+        tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/tvRestaurante"
+        android:id="@+id/tvPrato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Restaurante"
-        android:textAllCaps="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="Prato 🍽️"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/txtPrato"
+        app:layout_constraintTop_toBottomOf="@+id/txtMesa"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/txtItem"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="0"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrato"
+        app:layout_constraintTop_toBottomOf="@+id/tvItem"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Item 🔢"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/txtItem"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvMesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Mesa 👥"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/txtMesa"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/txtMesa"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="00"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/txtPrato"
+        app:layout_constraintTop_toBottomOf="@+id/tvMesa"
         tools:ignore="HardcodedText" />
 
     <ListView
         android:id="@+id/lista"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInserir" />
+        app:layout_constraintTop_toBottomOf="@+id/btnInserir"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/btnInserir"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Inserir pedido"
-        app:layout_constraintEnd_toEndOf="@+id/txtPrato"
-        app:layout_constraintStart_toStartOf="@+id/txtPrato"
-        app:layout_constraintTop_toBottomOf="@+id/txtPrato"
-        tools:ignore="HardcodedText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

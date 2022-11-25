@@ -12,8 +12,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Mesa"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tvItemLista"
@@ -22,8 +24,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="Item"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tvMesaLista"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tvPratoLista"
@@ -32,8 +36,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="Prato"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tvItemLista"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/tvAtendido"
@@ -42,8 +48,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="Atendido?"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/tvPratoLista"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/txtMesaLista"
@@ -51,8 +59,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="00"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tvMesaLista"
-        app:layout_constraintTop_toBottomOf="@+id/tvMesaLista" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMesaLista"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/txtItemLista"
@@ -60,8 +70,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="0"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tvItemLista"
-        app:layout_constraintTop_toBottomOf="@+id/tvItemLista" />
+        app:layout_constraintTop_toBottomOf="@+id/tvItemLista"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/txtPratoLista"
@@ -69,8 +81,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Prato"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tvPratoLista"
-        app:layout_constraintTop_toBottomOf="@+id/tvPratoLista" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPratoLista"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/txtAtendido"
@@ -78,7 +92,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="NÃO"
-        android:textColor="#F44336"
+        android:textColor="#DD2C00"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/tvAtendido"
-        app:layout_constraintTop_toBottomOf="@+id/tvAtendido" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAtendido"
+        tools:ignore="HardcodedText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
